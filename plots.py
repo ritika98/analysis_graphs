@@ -1,0 +1,6 @@
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.plot(temp['2021-04-27':'2021-05-01'].temp , label = 'temp', color = 'r')
+ax2 = ax.twinx()
+ax2.plot(df['2021-04-27':'2021-05-01']['Hum - %'], label = 'humidity', color = 'b')
+df['2021-04-27':'2021-05-01']['Hum - %'].plot()
